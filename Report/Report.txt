@@ -1,0 +1,31 @@
+Retail Outlet Product Visibility, Display & Packaging Analysis
+
+This analysis explores product distribution, brand visibility, display methods, and packaging trends across 1,500 retail outlets using Power BI. The objective was to generate insights that support better product placement, stocking efficiency, and retail strategy.
+
+Data Preparation
+
+The dataset contained combined response fields, inconsistent text values, and multiple dummy (1/0) columns. Using Power BI and Power Query, I cleaned and standardized product names, fixed empty values, split combined responses, and unpivoted dummy columns into structured Brand, Display, and Packaging tables. A star schema model was implemented using Outlet ID as the primary key to ensure accurate relationships and analysis.
+
+Key Insights
+
+Across the dataset, 13 unique brands appeared a total of 6,155 times, with an average of 4.10 brands per outlet, showing strong brand co-existence in most outlets.
+
+Coca-Cola recorded the highest brand visibility, appearing in 1,028 outlets, indicating strong market dominance and distribution strength.
+
+In terms of outlet distribution, Shop outlets dominate the market, accounting for 1,289 out of 1,500 outlets. They also contribute the highest product visibility, with 5,240 total brand appearances, making them the most critical channel for product distribution.
+
+Stock condition analysis shows that 648 outlets are partially stocked while 595 outlets are well stocked, highlighting a significant opportunity to improve availability through better stock replenishment.
+
+Display & Packaging Insights
+
+Product display is widespread, with 1,482 outlets using at least one display type, resulting in a 98.8% display coverage. All outlets have packaged products, giving 100% packaging coverage.
+
+Among display types, “On Display Stand” is the most dominant, present in 972 outlets, accounting for over 49% of all product displays.
+
+For packaging, PET bottles (50cl/1L) are the most common format, reflecting their role as the primary fast-moving packaging type.
+
+Recommendations
+
+Brands should prioritize Shop outlets for distribution and visibility.
+Improving stock levels in partially stocked outlets can significantly increase availability and potential sales.
+Investing further in display stands and maintaining strong supply of PET bottle packaging will strengthen product performance across outlets.

@@ -1,0 +1,50 @@
+Avg Brands Per Outlet = 
+AVERAGEX(
+    VALUES(Brand_Availability[Outlet_ID]),
+    CALCULATE(COUNTROWS(Brand_Availability))
+)
+
+Avg Display per Outlet = 
+AVERAGEX(
+    VALUES(Display_Table[Outlet_ID]),
+    CALCULATE(COUNTROWS(Display_Table))
+)
+
+Brands Presence Across Outlets = COUNTROWS(Brand_Availability)
+
+Display Count = 
+DISTINCTCOUNT(Display_Table[Outlet_ID])
+
+Display Coverage % = 
+DIVIDE([Outlets with any Display], [Total Outlets], 0)
+
+Outlets with any Display = 
+    DISTINCTCOUNT(Display_Table[Outlet_ID])
+
+Outlets with any Package = 
+    DISTINCTCOUNT(Package_Table[Outlet_ID])
+
+Package Coverage % = 
+DIVIDE([Outlets with any Package], [Total Outlets], 0)
+
+
+Package Presence = 
+DISTINCTCOUNT(Package_Table[Outlet_ID])
+
+Percentage of outlets per display type = 
+DIVIDE(
+    CALCULATE(DISTINCTCOUNT(Display_Table[Outlet_ID]), Display_Table[Visisble] = 1),
+    [Total Outlets],
+    0
+)
+
+Percentage Outlets Per Brand = 
+DIVIDE(
+    DISTINCTCOUNT(Brand_Availability[Outlet_ID]),
+    DISTINCTCOUNT(Outlet_Master[Outlet_ID]),
+    0
+)
+
+Total Brands Available = DISTINCTCOUNT(Brand_Availability[Brand])
+
+Total Outlets = DISTINCTCOUNT(Outlet_Master[Outlet_ID])
